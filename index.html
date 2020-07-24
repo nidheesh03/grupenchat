@@ -101,5 +101,28 @@
               </div>
             
           </div>
+                  <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyDLA9AKwPFD2dct0ILDenmbZs6lqDM4wAw",
+            authDomain: "grupenchat.firebaseapp.com",
+            databaseURL: "https://grupenchat.firebaseio.com",
+            projectId: "grupenchat",
+            storageBucket: "grupenchat.appspot.com",
+            messagingSenderId: "784932521603",
+            appId: "1:784932521603:web:9c2fd9098550741b90bdb6",
+            measurementId: "G-TTCKSX73X3"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+        </script>
     </body>
 </html>
