@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>
+            GRUPENCHAT
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="function.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="header-heading">WELCOME TO GRUPENCHAT</h1>
+            <!-- Trigger the modal with a button -->
+            <div class="button-div">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myPop">LET'S GET STARTED</button>
+        </div>
+        <!-- DATA TOGGLE="MODAL" OPENS THE MODAL WINDOW -->
+            <!-- Modal -->
+            <div class="modal fade" id="myPop" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1>ARE YOU NEW HERE</h1>
+                            <div class="modal-body">
+                                <button class="yes-button" data-toggle="modal"data-target="#myModal2" >
+                                    YES
+                                </button>
+                                <br><br>
+                                <button class="no-button" data-toggle="modal"data-target="#myModal">
+                                    NO
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">LOG IN</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>EMAIL-ID:</p>
+                    <input type="text">
+                    <p>PASSWORD:</p>
+                    <input type="password">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">SUBMIT</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">SIGN UP</h4>
+                    </div>
+                    <div class="modal-body">
+                      <p>EMAIL-ID:</p>
+                      <input type="text">
+                      <p>NAME:</p>
+                      <input type="text">
+                      <p>PASSWORD:</p>
+                      <input type="password">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default btn-warning" data-dismiss="modal">SUBMIT</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            
+          </div>
+    </body>
+</html>
