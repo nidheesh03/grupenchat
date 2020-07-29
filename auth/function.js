@@ -10,7 +10,7 @@ function registerUser(event){
         .then(
             function(result){
                 console.log(result);
-                window.location.replace("file:///C:/Users/lenovo/Downloads/Nidheesh/WEB%20DEVELOPMENT/MESSENGER/reply.html");
+                window.location.replace("../user/reply.html");
                 //.. refers to the previous directory 
             }
         )
