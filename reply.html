@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style2.css">
+        <script src="converse.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src =  "converse.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>    <body onload = "loadMessages()"> 
+        <div class = "container heading-container">
+            <div class = "row">
+                <div class = "col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+                    <h1 class = "welcome-heading"><b>Welcome to OpenBook</b></h1>
+                </div>
+                <div class = "col-md-1 col-sm-1">
+                    <button class = "btn btn-info logout-btn" onclick = "logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+        <div class = "container">
+            <div class = "row justify-content-center chat-box-container">
+                <div class = "col-md-8 col-md-offset-2 chat-history" id = "chat-box">
+                    <!--This is filled by the messages-->
+                </div>
+                <div class = "col-md-7 col-md-offset-2 col-sm-10">
+                    <textarea class = "form-control" rows = "2" placeholder = "Type your message" id = "message" onkeyup = "msgTypeHandle(event)"></textarea>
+                </div>
+                <div class = "col-md-1 col-sm-1">
+                    <button class = "btn btn-info send-btn" onclick = "postMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+               <!-- The core Firebase JS SDK is always required and must be listed first -->
+               <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+               <!-- TODO: Add SDKs for Firebase products that you want to use
+                   https://firebase.google.com/docs/web/setup#available-libraries -->
+               <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+       
+               <script>
+                 // Your web app's Firebase configuration
+                 var firebaseConfig = {
+                   apiKey: "AIzaSyDLA9AKwPFD2dct0ILDenmbZs6lqDM4wAw",
+                   authDomain: "grupenchat.firebaseapp.com",
+                   databaseURL: "https://grupenchat.firebaseio.com",
+                   projectId: "grupenchat",
+                   storageBucket: "grupenchat.appspot.com",
+                   messagingSenderId: "784932521603",
+                   appId: "1:784932521603:web:9c2fd9098550741b90bdb6",
+                   measurementId: "G-TTCKSX73X3"
+                 };
+                 // Initialize Firebase
+                 firebase.initializeApp(firebaseConfig);
+                 firebase.analytics();
+               </script>
+    </body>
+</html>
