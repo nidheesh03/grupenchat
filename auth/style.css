@@ -7,6 +7,10 @@
     font-family: 'Anton', sans-serif;
     font-size: 100px;
 }
+.submit-btn{
+    float: right;
+    margin-right:40px;
+}
 .button-div{
     text-align: center;
     margin-top: 300px;

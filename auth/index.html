@@ -10,7 +10,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onload="isLoggedIn()">
         <div class="container">
             <h1 class="header-heading">WELCOME TO GRUPENCHAT</h1>
             <!-- Trigger the modal with a button -->
@@ -63,12 +63,12 @@
                   </div>
                   <div class="modal-body">
                     <p>EMAIL-ID:</p>
-                    <input type="text">
+                    <input type="text" id="email-login">
                     <p>PASSWORD:</p>
-                    <input type="password">
+                    <input type="password" id="pwd-login">
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default btn-danger" data-dismiss="modal"onclick="display()">SUBMIT</button>
+                    <button type="button" class="btn btn-default btn-danger" data-dismiss="modal"onclick = "loginUser(event)">SUBMIT</button>
                   </div>
                 </div>
                 
@@ -86,15 +86,13 @@
                     </div>
                     <div class="modal-body">
                       <p>EMAIL-ID:</p>
-                      <input type="text">
+                      <input type="text" id="email-register">
                       <p>NAME:</p>
-                      <input type="text">
+                      <input type="text" id="username-register">
                       <p>PASSWORD:</p>
-                      <input type="password">
+                      <input type="password"id="pwd-register">
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-default btn-warning" data-dismiss="modal"onclick="display()">SUBMIT</button>
-                    </div>
+                                          <button type="button" class="btn btn-default btn-warning submit-btn" data-dismiss="modal"onclick="registerUser(event)">SUBMIT</button>
                   </div>
                   
                 </div>
