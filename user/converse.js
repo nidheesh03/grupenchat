@@ -1,3 +1,15 @@
+var username;
+function getName(){
+    firebase.auth().onAuthStateChanged(
+        function(user){
+            if(user){
+                username=user.displayName;
+            }
+            //this if(user) is used to check whether the user is undefined or not 
+            //and if the user is defined then change the value of username variable to the user.displayName(this is the name of the user)
+        }
+    )
+}
 function logout(){
     firebase.auth().signOut()
     //the .signOut is a specififc function provided by firebase
@@ -13,7 +25,7 @@ function logout(){
 function postMessage(){
     var message=document.getElementById("message").value;
     var data={
-        sender:"nidheesh",
+        sender:username,
         content:message,
         sentAt:(new Date()).getTime()
     }
@@ -29,9 +41,13 @@ function msgTypeHandle(event){
     }
 }
 function getChatDom(data){
+    var offset=0;
+    if(data["sender"]==username){
+        offset=2;
+    }
     var element=document.createElement("div");
     element.classList=["row"];
-        element.innerHTML=`<div class = "col-sm-10 message-box">
+        element.innerHTML=`<div class = "col-sm-10-offset-${offset} message-box">
         <p class = "sender"><b>${data["sender"]}</b></p>
         <p class = "message">${data["content"]}</p>
     </div>`;
@@ -39,6 +55,7 @@ function getChatDom(data){
 }
 //! refers to not.This means that the condition will not be true.
 function loadMessages(){
+    getName();
     var chat=document.getElementById("chat-box");
     firebase.firestore().collection("messages").orderBy("sentAt")
         .onSnapshot(

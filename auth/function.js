@@ -10,7 +10,30 @@ function registerUser(event){
         .then(
             function(result){
                 console.log(result);
-                window.location.replace("../user/reply.html");
+                firebase.auth().onAuthStateChanged(
+                    function(user){
+                        if(user){
+                            user.updateProfile(
+                                {
+                                    displayName:username
+                                }
+                            )
+                            .then(
+                                function(){
+                                    window.location.replace("../user/reply.html");
+                                }
+                            )
+                            .catch(
+                                function(error){
+                                    console.log(error);
+                                }
+                      )
+                        }
+                        else{
+                            console.log("error");
+                        }
+                    }
+                )
                 //.. refers to the previous directory 
             }
         )
@@ -28,7 +51,7 @@ function loginUser(event){
     firebase.auth().signInWithEmailAndPassword(email,password)
     .then(
         function(result){
-            window.location.replace("../talk/index.html");
+            window.location.replace("../user/reply.html");
         }
     )
     .catch(
