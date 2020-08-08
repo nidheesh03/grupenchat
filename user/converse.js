@@ -47,7 +47,7 @@ function getChatDom(data){
     }
     var element=document.createElement("div");
     element.classList=["row"];
-        element.innerHTML=`<div class = "col-sm-10-offset-${offset} message-box">
+        element.innerHTML=`<div class = "col-sm-10 col-sm-offset-${offset} message-box">
         <p class = "sender"><b>${data["sender"]}</b></p>
         <p class = "message">${data["content"]}</p>
     </div>`;
