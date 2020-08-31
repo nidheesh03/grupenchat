@@ -14,7 +14,7 @@ function logout(){
     firebase.auth().signOut()
     //the .signOut is a specififc function provided by firebase
         .then(function(){
-            window.location.replace("../auth/index.html");
+            window.location.replace("../auth/user.html");
         })
         .catch(
             function(error){
@@ -56,6 +56,8 @@ function getChatDom(data){
 //! refers to not.This means that the condition will not be true.
 function loadMessages(){
     getName();
+    //this has been used only to change the username variable
+    //this is the way to give another function in a function
     var chat=document.getElementById("chat-box");
     firebase.firestore().collection("messages").orderBy("sentAt")
         .onSnapshot(
